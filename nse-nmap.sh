@@ -22,7 +22,7 @@ echo -e " \_\,,,,,,,,,/_/                                                "
 echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
 echo
 echo -e "----------------------------------------------------------------"
-
+echo
 echo -e " [01] Enumeracion http"
 echo -e " [02] Titulo http"
 echo -e " [03] Fuerza bruta de dns"
@@ -45,6 +45,8 @@ echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
 nmap --script http-enum -sV $iphostname
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "02" ] || [ "$nsenmap" == "2" ];
 then
@@ -53,7 +55,8 @@ echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
 nmap --script http-title -sV $iphostname
-
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "03" ] || [ "$nsenmap" == "3" ];
 then
@@ -61,7 +64,9 @@ echo
 echo -n -e "Enter Text File: "
 read txtfile
 echo
-nmap --script dns.brute -sV $txtfile
+nmap --script dns-brute.nse -sV $txtfile
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "04" ] || [ "$nsenmap" == "4" ];
 then
@@ -70,6 +75,8 @@ echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
 nmap -A $iphostname
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "05" ] || [ "$nsenmap" == "5" ];
 then
@@ -78,6 +85,8 @@ echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
 nmap -vv --script http-errors --script-args "httpspider.url=/docs/,httpspider.maxpagecount=3,httpspider.maxdepth=1" $iphostname
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "06" ] || [ "$nsenmap" == "6" ];
 then
@@ -86,6 +95,8 @@ echo -n -e "Enter IPv6-Address: "
 read ipvsixaddress
 echo
 nmap --script http-exif-spider --script-args="http.max-cache-size=99999999" -Pn $ipvsixaddress
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "07" ] || [ "$nsenmap" == "7" ];
 then
@@ -94,6 +105,8 @@ echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
 nmap --script ftp-brute $iphostname
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "08" ] || [ "$nsenmap" == "8" ];
 then
@@ -101,7 +114,10 @@ echo
 echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
-nmap --script=mysql-brute $iphostname
+nmap --script mysql-brute.nse -Pn $iphostname
+echo
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "09" ] || [ "$nsenmap" == "9" ];
 then
@@ -110,6 +126,8 @@ echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
 nmap --script http-waf-detect --script-args="http-waf-detect.aggro,http-waf-detect.detectBodyChanges" $iphostname
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "10" ];
 then
@@ -118,6 +136,8 @@ echo -n -e "Enter (IP or Hostname): "
 read iphostname
 echo
 nmap --script http-waf-fingerprint $iphostname
+read -rsp $'Press any key to continue...\n' -n 1 key
+bash $0
 
 elif [ "$nsenmap" == "00" ] || [ "$nsenmap" == "0" ];
 then
