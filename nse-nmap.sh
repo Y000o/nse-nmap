@@ -28,7 +28,7 @@ echo -e " [02] Titulo http"
 echo -e " [03] Fuerza bruta de dns"
 echo -e " [04] OS y version"
 echo -e " [05] Encuentra errores HTTP"
-echo -e " [06] Fatos EXIF ​​de las fotos"
+echo -e " [06] Fatos EXIF de las fotos"
 echo -e " [07] Fuerza bruta a FTP"
 echo -e " [08] Fuerza bruta a mysql"
 echo -e " [09] Detección de firewall"
@@ -85,7 +85,7 @@ echo
 echo -n -e "Enter IPv6-Address: "
 read ipvsixaddress
 echo
-nmap --script http-exif-spider --script-args="http.max-cache-size=99999999" $ipvsixaddress
+nmap --script http-exif-spider --script-args="http.max-cache-size=99999999" -Pn $ipvsixaddress
 
 elif [ "$nsenmap" == "07" ] || [ "$nsenmap" == "7" ];
 then
