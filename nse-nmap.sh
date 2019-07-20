@@ -36,9 +36,9 @@ echo -e " [10] Fingerprint de Firewall "
 echo -e " [00] Exit"
 echo
 echo -n -e "nse-nmap > "
-read nse-nmap
+read nsenmap
 
-if [ "$Nse-nmap" == "01" ] || [ "$Nse-nmap" == "1" ];
+if [ "$nsenmap" == "01" ] || [ "$nsenmap" == "1" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -46,7 +46,7 @@ read iphostname
 echo
 nmap --script http-enum -sV $iphostname
 
-elif [ "$nse-nmap" == "02" ] || [ "$nse-nmap" == "2" ];
+elif [ "$nsenmap" == "02" ] || [ "$nsenmap" == "2" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -55,7 +55,7 @@ echo
 nmap --script http-title -sV $iphostname
 
 
-elif [ "$nse-nmap" == "03" ] || [ "$nse-nmap" == "3" ];
+elif [ "$nsenmap" == "03" ] || [ "$nsenmap" == "3" ];
 then
 echo
 echo -n -e "Enter Text File: "
@@ -63,7 +63,7 @@ read txtfile
 echo
 nmap --script dns.brute -sV $txtfile
 
-elif [ "$nse-nmap" == "04" ] || [ "$nse-nmap" == "4" ];
+elif [ "$nsenmap" == "04" ] || [ "$nsenmap" == "4" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -71,7 +71,7 @@ read iphostname
 echo
 nmap -A $iphostname
 
-elif [ "$nse-nmap" == "05" ] || [ "$nse-nmap" == "5" ];
+elif [ "$nsenmap" == "05" ] || [ "$nsenmap" == "5" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -79,7 +79,7 @@ read iphostname
 echo
 nmap -vv --script http-errors --script-args "httpspider.url=/docs/,httpspider.maxpagecount=3,httpspider.maxdepth=1" $iphostname
 
-elif [ "$nse-nmap" == "06" ] || [ "$nse-nmap" == "6" ];
+elif [ "$nsenmap" == "06" ] || [ "$nsenmap" == "6" ];
 then
 echo
 echo -n -e "Enter IPv6-Address: "
@@ -87,7 +87,7 @@ read ipvsixaddress
 echo
 nmap --script http-exif-spider --script-args="http.max-cache-size=99999999" $ipvsixaddress
 
-elif [ "$nse-nmap" == "07" ] || [ "$nse-nmap" == "7" ];
+elif [ "$nsenmap" == "07" ] || [ "$nsenmap" == "7" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -95,7 +95,7 @@ read iphostname
 echo
 nmap --script ftp-brute $iphostname
 
-elif [ "$nse-nmap" == "08" ] || [ "$nse-nmap" == "8" ];
+elif [ "$nsenmap" == "08" ] || [ "$nsenmap" == "8" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -103,7 +103,7 @@ read iphostname
 echo
 nmap --script=mysql-brute $iphostname
 
-elif [ "$nse-nmap" == "09" ] || [ "$nse-nmap" == "9" ];
+elif [ "$nsenmap" == "09" ] || [ "$nsenmap" == "9" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -111,7 +111,7 @@ read iphostname
 echo
 nmap --script http-waf-detect --script-args="http-waf-detect.aggro,http-waf-detect.detectBodyChanges" $iphostname
 
-elif [ "$nse-nmap" == "10" ];
+elif [ "$nsenmap" == "10" ];
 then
 echo
 echo -n -e "Enter (IP or Hostname): "
@@ -119,7 +119,7 @@ read iphostname
 echo
 nmap --script http-waf-fingerprint $iphostname
 
-elif [ "$nse-nmap" == "00" ] || [ "$nse-nmap" == "0" ];
+elif [ "$nsenmap" == "00" ] || [ "$nsenmap" == "0" ];
 then
 exit
 
