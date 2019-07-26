@@ -12,21 +12,38 @@ if [ "$(which nmap)" == "" ]; then
                 apt install nmap
         fi
 fi
-show_banner() {
-	clear
-	echo -e " ---------------------------------------------------------------"
-	echo
-	echo -e " /             \                                                "
-	echo -e "|    ()   ()    |                                               "
-	echo -e "(_     /|\     _)                                               "
-	echo -e " \_\,,,,,,,,,/_/                                                "
-	echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
-	echo
-	echo -e "----------------------------------------------------------------"
-	echo
-}
+clear
+echo -e " ---------------------------------------------------------------"
+echo
+echo -e " /             \                                                "
+echo -e "|    ()   ()    |                                               "
+echo -e "(_     /|\     _)                                               "
+echo -e " \_\,,,,,,,,,/_/                                                "
+echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
+echo
+echo -e "----------------------------------------------------------------"
+echo
+echo -e " [01] Herramientas Nmap"
+echo -e " [02] Herramientas sqlmap"
+echo -e " [03] Acerca de mi"
+echo -e " [04] Salir"
+echo
+echo -n -e "nse-nmap > "
+read nsemenu
 
-show_opciones_nmap(){
+if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
+then
+clear
+echo -e " ---------------------------------------------------------------"
+echo
+echo -e " /             \                                                "
+echo -e "|    ()   ()    |                                               "
+echo -e "(_     /|\     _)                                               "
+echo -e " \_\,,,,,,,,,/_/                                                "
+echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
+echo
+echo -e "----------------------------------------------------------------"
+echo
 echo -e " [01] Enumeracion http"
 echo -e " [02] Titulo http"
 echo -e " [03] Fuerza bruta de dns"
@@ -37,7 +54,7 @@ echo -e " [07] Fuerza bruta a FTP"
 echo -e " [08] Fuerza bruta a mysql"
 echo -e " [09] Detección de firewall"
 echo -e " [10] Fingerprint de Firewall "
-#echo -e " [00] Exit"
+echo -e " [00] Atras (menu)"
 echo
 echo -n -e "nse-nmap > "
 read nsenmap
@@ -143,9 +160,10 @@ nmap --script http-waf-fingerprint $iphostname
 read -rsp $'Press any key to continue...\n' -n 1 key
 bash $0
 
-#elif [ "$nsenmap" == "00" ] || [ "$nsenmap" == "0" ];
-#then
-#exit
+elif [ "$nsenmap" == "00" ] || [ "$nsenmap" == "0" ];
+then
+echo -e "\033[1;31m[!] Atras..\033[1;0m"
+bash $0
 
 else
 echo
@@ -153,31 +171,22 @@ echo -e "\033[1;31m[!] Elegiste mal...\033[1;0m"
 sleep 1
 bash $0
 fi
-}
+else
+	if [ "$nsemenu" == "02" ] || [ "$nsemenu" == "2" ];
+then
+echo
+echo -e "\033[1;31m[!] Proximamente...\033[1;0m"
+sleep 1
+bash $0
 
-show_menu(){
-	clear
-	echo"-------------------------------"
-	echo"  Elige la opcion que quieras  "
-	echo"-------------------------------"
-	echo"1 - Nmap-nse"
-	echo"2 - sqlmap (proximamente)"
-	echo"3 - salir"
-}
-
-leer_respuestas(){
-	local choise
-	read -p "-----> " choise
-	case $choise in
-		1) show_opciones_nmap ;;
-		2) show_opciones_sqlmap ;;
-		3) exit 0;;
-		*) echo -e "${RED}Error...${STD}" && sleep 2
-	esac
-}
-
-while true
-do
-	show_banner
-	show_menu
-done
+elif [ "$nsemenu" == "03" ] || [ "$nsemenu" == "3" ];
+then
+echo
+echo -e "\033[1;31m[!] Creado por LuisMadero... \033[1;0m"
+sleep 10
+bash $0
+elif [ "$nsemenu" == "04" ] || [ "$nsemenu" == "4" ];
+then
+exit
+fi
+fi
