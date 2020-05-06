@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # Nse-nmap v1.1
-# Author: LuisMadero
+# Author: _Y000!_
 if [ "$(which nmap)" == "" ]; then
         echo -n -e "nmap need to be installed [y/N] "
         read -r yorn
@@ -19,12 +19,12 @@ echo -e " /             \                                                "
 echo -e "|    ()   ()    |                                               "
 echo -e "(_     /|\     _)                                               "
 echo -e " \_\,,,,,,,,,/_/                                                "
-echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
+echo -e "    \_'''''_/      19-07-2019 | creado por: _Y000!_   "
 echo
 echo -e "----------------------------------------------------------------"
 echo
-echo -e " [01] Herramientas Nmap"
-echo -e " [02] Herramientas sqlmap"
+echo -e " [01] Herramienta Nmap"
+echo -e " [02] Herramienta sqlmap"
 echo -e " [03] Acerca de mi"
 echo -e " [04] Salir"
 echo
@@ -39,7 +39,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 	echo -e "|    ()   ()    |                                               "
 	echo -e "(_     /|\     _)                                               "
 	echo -e " \_\,,,,,,,,,/_/                                                "
-	echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
+	echo -e "    \_'''''_/      19-07-2019 | creado por: _Y000!_             "
 	echo
 	echo -e "----------------------------------------------------------------"
 	echo
@@ -59,7 +59,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 		echo -e "|    ()   ()    |                                               "
 		echo -e "(_     /|\     _)                                               "
 		echo -e " \_\,,,,,,,,,/_/                                                "
-		echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
+		echo -e "    \_'''''_/      19-07-2019 | creado por: _Y000!_             "
 		echo
 		echo -e "----------------------------------------------------------------"
 		echo
@@ -147,7 +147,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 		echo -e "|    ()   ()    |                                               "
 		echo -e "(_     /|\     _)                                               "
 		echo -e " \_\,,,,,,,,,/_/                                                "
-		echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
+		echo -e "    \_'''''_/      19-07-2019 | creado por: _Y000!_   "
 		echo
 		echo -e "----------------------------------------------------------------"
 		echo
@@ -246,7 +246,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 		echo -e "|    ()   ()    |                                               "
 		echo -e "(_     /|\     _)                                               "
 		echo -e " \_\,,,,,,,,,/_/                                                "
-		echo -e "    \_'''''_/      19-07-2019 | creado por: Luis Madero | yoo   "
+		echo -e "    \_'''''_/      19-07-2019 | creado por: _Y000!_             "
 		echo
 		echo -e "----------------------------------------------------------------"
 		echo
@@ -388,7 +388,7 @@ bash "$0"
 elif [ "$nsemenu" == "03" ] || [ "$nsemenu" == "3" ];
 then
 echo
-echo -e "\033[1;31m[!] Creado por LuisMadero... \033[1;0m"
+echo -e "\033[1;31m[!] Creado por _Y000!_... \033[1;0m"
 sleep 10
 bash "$0"
 elif [ "$nsemenu" == "04" ] || [ "$nsemenu" == "4" ];
