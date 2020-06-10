@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # Nse-nmap v1.1
 # Author: _Y000!_
-if [ "$(which nmap)" == "" ]; then
+if [ "$(whereis nmap)" == "" ]; then
         echo -n -e "nmap need to be installed [y/N] "
         read -r yorn
         if [ "$yorn" == "y" ] || [ "$yorn" == "Y" ]; then
