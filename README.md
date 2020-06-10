@@ -36,4 +36,4 @@ por ultimo en NSE encontramos los script NSE:
 -Detección de firewall
 -Fingerprint de Firewall
 ``` 
-creador: https://twitter.com/_Y000_
+creador:  https://twitter.com/_Y000_?s=09
