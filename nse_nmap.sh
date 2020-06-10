@@ -2,7 +2,7 @@
 # Nse-nmap v1.1
 # Author: _Y000!_
 if [ "$(whereis nmap)" == "" ]; then
-        echo -n -e "nmap need to be installed [y/N] "
+        echo -n -e "nmap será instalado... [y/N] "
         read -r yorn
         if [ "$yorn" == "y" ] || [ "$yorn" == "Y" ]; then
                 apt install nmap
@@ -81,7 +81,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sP "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsebasico" == "02" ] || [ "$nsebasico" == "2" ];
@@ -91,7 +91,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sP "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsebasico" == "03" ] || [ "$nsebasico" == "3" ];
@@ -101,7 +101,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sS "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsebasico" == "04" ] || [ "$nsebasico" == "4" ];
@@ -111,7 +111,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sF "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsebasico" == "05" ] || [ "$nsebasico" == "5" ];
@@ -121,7 +121,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sU "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsebasico" == "00" ] || [ "$nsebasico" == "0" ];
@@ -171,7 +171,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sO "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nseavanzado" == "02" ] || [ "$nseavanzado" == "2" ];
@@ -181,7 +181,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sV "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nseavanzado" == "03" ] || [ "$nseavanzado" == "3" ];
@@ -191,7 +191,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -O "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nseavanzado" == "04" ] || [ "$nseavanzado" == "4" ];
@@ -201,7 +201,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -sS "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0" 
 
 			elif [ "$nseavanzado" == "05" ] || [ "$nseavanzado" == "5" ];
@@ -211,7 +211,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap --traceroute "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0" 
 
 			elif [ "$nseavanzado" == "06" ] || [ "$nseavanzado" == "6" ];
@@ -221,7 +221,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap --script whois-ip.nse -d "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0" 
 
 			elif [ "$nseavanzado" == "00" ] || [ "$nseavanzado" == "0" ];
@@ -271,7 +271,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap --script http-enum -sV "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "02" ] || [ "$nsenmap" == "2" ];
@@ -281,7 +281,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap --script http-title -sV "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "03" ] || [ "$nsenmap" == "3" ];
@@ -291,7 +291,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r txtfile
 			echo
 			nmap --script dns-brute.nse -sV "$txtfile"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "04" ] || [ "$nsenmap" == "4" ];
@@ -301,7 +301,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap -vv --script http-errors --script-args "httpspider.url=/docs/,httpspider.maxpagecount=3,httpspider.maxdepth=1" "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "05" ] || [ "$nsenmap" == "5" ];
@@ -311,7 +311,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r ipvsixaddress
 			echo
 			nmap --script http-exif-spider --script-args="http.max-cache-size=99999999" -Pn "$ipvsixaddress"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "06" ] || [ "$nsenmap" == "6" ];
@@ -321,7 +321,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap --script ftp-brute "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "07" ] || [ "$nsenmap" == "7" ];
@@ -332,7 +332,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			echo
 			nmap --script mysql-brute.nse -Pn "$iphostname"
 			echo
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "08" ] || [ "$nsenmap" == "8" ];
@@ -342,7 +342,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap --script http-waf-detect --script-args="http-waf-detect.aggro,http-waf-detect.detectBodyChanges" "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "09" ] || [ "$nsenmap" == "9" ];
@@ -352,7 +352,7 @@ if [ "$nsemenu" == "01" ] || [ "$nsemenu" == "1" ];
 			read -r iphostname
 			echo
 			nmap --script http-waf-fingerprint "$iphostname"
-			read -rsp $'Press any key to continue...\n' -n 1 key
+			read -rsp $'Presiona alguna tecla para continuar ...\n' -n 1 key
 			bash "$0"
 
 			elif [ "$nsenmap" == "00" ] || [ "$nsenmap" == "0" ];
